@@ -1,0 +1,35 @@
+import { Link } from 'react-router-dom';
+
+const Header = () => {
+  return (
+    <div className="p-2">
+      <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
+        <Link to="/">
+          <h1 className="font-bold  text-pink-500 hover:text-black p-1 hover:bg-pink-500 rounded-lg cursor-pointer">
+            AUTH-APP
+          </h1>
+        </Link>
+
+        <ul className="flex  gap-4 ">
+          <Link to="/home">
+            <li className="font-bold text-pink-500 hover:text-black p-1 hover:bg-pink-500 rounded-lg cursor-pointer ">
+              HOME
+            </li>
+          </Link>
+          <Link to="/about">
+            <li className="font-bold text-pink-500 hover:text-black p-1 hover:bg-pink-500 rounded-lg cursor-pointer ">
+              ABOUT
+            </li>
+          </Link>
+          <Link to="sign-in">
+            <li className="font-bold  text-pink-500 hover:text-black p-1 hover:bg-pink-500 rounded-lg cursor-pointer">
+              SIGNIN
+            </li>
+          </Link>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
