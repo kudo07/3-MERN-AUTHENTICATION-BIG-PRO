@@ -25,3 +25,27 @@ const userSlice = createSlice({
 });
 export const { signInStart, signInSuccess, signInFailure } = userSlice.actions;
 export default userSlice.reducer;
+{
+  /* <Container maxW="620px">
+  <Header />
+  <Routes>
+    <Route
+      path="/"
+      element={user ? <HomePage /> : <Navigate to="/auth" />}
+    ></Route>
+    <Route
+      path="/update"
+      element={user ? <UpdateProfilePage /> : <Navigate to="/auth" />}
+    />
+    <Route
+      path="/auth"
+      element={!user ? <AuthPage /> : <Navigate to="/" />}
+    ></Route>
+    <Route path="/:username" element={<UserPage />}></Route>
+    <Route path="/:username/post/:pid" element={<PostPage />}></Route>
+  </Routes>
+  {user && <Logout />}
+  {user && <CreatePost />}
+  {/* clear cookies with fetch req, clear local storage,clear state */
+}
+// </Container>; */}
