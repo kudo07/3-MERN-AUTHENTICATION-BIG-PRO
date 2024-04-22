@@ -6,6 +6,7 @@ import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import { useSelector } from 'react-redux';
+import PrivateRoute from './components/PrivateRoute';
 function App() {
   const { currentUser } = useSelector((state) => state.user);
   // console.log(currentUser);
@@ -26,7 +27,9 @@ function App() {
           path="/sign-up"
           element={!currentUser ? <SignUp /> : <Navigate to="/" />}
         />
-        <Route path="/profile" element={<Profile />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
       </Routes>
     </>
   );

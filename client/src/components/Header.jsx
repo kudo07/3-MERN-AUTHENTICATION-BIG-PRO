@@ -23,19 +23,18 @@ const Header = () => {
               ABOUT
             </li>
           </Link>
-          {/* {currentUser ? (
-            <span>SignOut</span>
-          ) : (
-            <Link to="sign-in">
+          <Link to="/profile">
+            {currentUser ? (
+              <img
+                src={currentUser.profilePicture}
+                alt="profile"
+                className="h-7 w-7 rounded-full object-cover"
+              />
+            ) : (
               <li className="font-bold  text-pink-500 hover:text-black p-1 hover:bg-pink-500 rounded-lg cursor-pointer">
                 SIGNIN
               </li>
-            </Link>
-          )} */}
-          <Link to="sign-in">
-            <li className="font-bold  text-pink-500 hover:text-black p-1 hover:bg-pink-500 rounded-lg cursor-pointer">
-              SIGNIN
-            </li>
+            )}
           </Link>
         </ul>
       </div>
