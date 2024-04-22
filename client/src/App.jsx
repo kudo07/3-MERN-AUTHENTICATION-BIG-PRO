@@ -8,7 +8,7 @@ import Header from './components/Header';
 import { useSelector } from 'react-redux';
 function App() {
   const { currentUser } = useSelector((state) => state.user);
-  console.log(currentUser);
+  // console.log(currentUser);
   return (
     <>
       <Header />

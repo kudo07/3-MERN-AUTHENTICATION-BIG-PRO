@@ -23,7 +23,7 @@ const Header = () => {
               ABOUT
             </li>
           </Link>
-          {currentUser ? (
+          {/* {currentUser ? (
             <span>SignOut</span>
           ) : (
             <Link to="sign-in">
@@ -31,7 +31,12 @@ const Header = () => {
                 SIGNIN
               </li>
             </Link>
-          )}
+          )} */}
+          <Link to="sign-in">
+            <li className="font-bold  text-pink-500 hover:text-black p-1 hover:bg-pink-500 rounded-lg cursor-pointer">
+              SIGNIN
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
