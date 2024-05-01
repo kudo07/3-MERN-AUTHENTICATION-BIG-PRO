@@ -18,6 +18,11 @@ const SignIn = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
+  // {email: 'vknwl0777@gmail.com', password: 'vknwl0777@gmail.com'}
+  // email: 'vknwl0777@gmail.com';
+  // password: 'vknwl0777@gmail.com';
+  // the email id get from the form input that id store and send it to the backend
+  console.log(formData);
   const handleSubmit = async (e) => {
     e.preventDefault();
     // setLoading(true);
