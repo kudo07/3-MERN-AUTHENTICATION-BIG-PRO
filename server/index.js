@@ -1,6 +1,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
-
+import cookieParser from 'cookie-parser';
 import connectMongoDB from './db/connectMongoDB.js';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cookieParser());
 // example
 app.get('/', (req, res) => {
   res.send('server is ready and running backend in index.js');
