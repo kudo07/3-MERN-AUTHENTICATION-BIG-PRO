@@ -13,6 +13,7 @@ import {
   deleteUserFailure,
   deleteUserStart,
   deleteUserSuccess,
+  signOut,
   updateUserFailure,
   updateUserStart,
   updateUserSuccess,
@@ -105,9 +106,18 @@ const Profile = () => {
         dispatch(deleteUserFailure(data));
       }
       dispatch(deleteUserSuccess(data));
-      navigate('/');
     } catch (error) {
       dispatch(deleteUserFailure(error));
+    }
+  };
+  //
+  //
+  const handleSignOut = async (req, res) => {
+    try {
+      await fetch('/api/auth/signout');
+      dispatch(signOut());
+    } catch (error) {
+      console.log(error);
     }
   };
   //
@@ -179,7 +189,9 @@ const Profile = () => {
         <span onClick={deleteHandleButton} className="text-purple-200">
           Deleted Account
         </span>
-        <span className="text-purple-200">Sign Out</span>
+        <span onClick={handleSignOut} className="text-purple-200">
+          Sign Out
+        </span>
       </div>
       <p className="text-red-700 mt-5">{error && 'Something went wrong!!'}</p>
       <p className="text-green-700 mt-5">
