@@ -44,6 +44,8 @@ const SignIn = () => {
         return;
       }
       dispatch(signInSuccess(data));
+      // the data of the user set in the currentUser signInsuccess action.payload contains that user data
+      // now whenever i want that user data i just simply useSelector and get the data
       navigate('/');
     } catch (error) {
       console.log(error);
