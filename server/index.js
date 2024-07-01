@@ -4,8 +4,8 @@ import cookieParser from 'cookie-parser';
 import connectMongoDB from './db/connectMongoDB.js';
 import userRoutes from './routes/user.route.js';
 import authRoutes from './routes/auth.route.js';
-dotenv.config();
 import path from 'path';
+dotenv.config();
 
 //
 const __dirname = path.resolve();
