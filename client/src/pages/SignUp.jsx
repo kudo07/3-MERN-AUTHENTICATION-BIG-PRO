@@ -14,7 +14,7 @@ const SignUp = () => {
       setLoading(true);
       setError(false);
       // to reset when we submit the form again
-      console.log(formData);
+      // console.log(formData);
       const res = await fetch('/api/auth/sign-up', {
         method: 'POST',
         headers: {
