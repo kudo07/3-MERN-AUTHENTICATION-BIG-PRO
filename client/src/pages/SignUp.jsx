@@ -77,7 +77,7 @@ const SignUp = () => {
           <span className="bold underline text-violet-400">SIGNIN</span>
         </Link>
       </div>
-      <p className="text-red-500 mt-5">{error && 'Something Went Wrong'}</p>
+      <p className="text-red-500 mt-5">{error.message}</p>
     </div>
   );
 };
